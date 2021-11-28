@@ -1,5 +1,5 @@
 ﻿
-namespace UserMaintenance
+namespace UserMaintenance2
 {
     partial class Form1
     {
