@@ -34,6 +34,7 @@ namespace UserMaintenance2
             this.label_FullName = new System.Windows.Forms.Label();
             this.textBox_FullName = new System.Windows.Forms.TextBox();
             this.button_fajlbairas = new System.Windows.Forms.Button();
+            this.button_delete = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // listBox_users
@@ -81,11 +82,22 @@ namespace UserMaintenance2
             this.button_fajlbairas.UseVisualStyleBackColor = true;
             this.button_fajlbairas.Click += new System.EventHandler(this.button_fajlbairas_Click);
             // 
+            // button_delete
+            // 
+            this.button_delete.Location = new System.Drawing.Point(305, 219);
+            this.button_delete.Name = "button_delete";
+            this.button_delete.Size = new System.Drawing.Size(347, 33);
+            this.button_delete.TabIndex = 9;
+            this.button_delete.Text = "button1";
+            this.button_delete.UseVisualStyleBackColor = true;
+            this.button_delete.Click += new System.EventHandler(this.button_delete_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button_delete);
             this.Controls.Add(this.button_fajlbairas);
             this.Controls.Add(this.textBox_FullName);
             this.Controls.Add(this.label_FullName);
@@ -105,6 +117,7 @@ namespace UserMaintenance2
         private System.Windows.Forms.Label label_FullName;
         private System.Windows.Forms.TextBox textBox_FullName;
         private System.Windows.Forms.Button button_fajlbairas;
+        private System.Windows.Forms.Button button_delete;
     }
 }
 

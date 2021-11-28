@@ -21,6 +21,7 @@ namespace UserMaintenance2
             button_add.Text = Resource1.Add;
             label_FullName.Text = Resource1.FullName;
             button_fajlbairas.Text = Resource1.Fajbairas;
+            button_delete.Text = Resource1.Delete;
 
             listBox_users.DataSource = users;
             listBox_users.ValueMember = "ID";
@@ -57,5 +58,11 @@ namespace UserMaintenance2
             }
         }
 
+        private void button_delete_Click(object sender, EventArgs e)
+        {
+            User valaszottUser = (User)listBox_users.SelectedItem;
+            users.Remove(valaszottUser);
+
+        }
     }
 }
