@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,6 +20,7 @@ namespace UserMaintenance2
             InitializeComponent();
             button_add.Text = Resource1.Add;
             label_FullName.Text = Resource1.FullName;
+            button_fajlbairas.Text = Resource1.Fajbairas;
 
             listBox_users.DataSource = users;
             listBox_users.ValueMember = "ID";
@@ -38,5 +40,22 @@ namespace UserMaintenance2
             u.FullName = textBox_FullName.Text;
             users.Add(u);
         }
+
+        private void button_fajlbairas_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog sfd = new SaveFileDialog();
+            if (sfd.ShowDialog() == DialogResult.OK)
+            {
+                using (StreamWriter sw = new StreamWriter(sfd.FileName))
+                {
+                    foreach (User item in users)
+                    {
+                        sw.WriteLine(item.ID + ";" + item.FullName);
+                    }
+                }
+                
+            }
+        }
+
     }
 }

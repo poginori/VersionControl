@@ -33,6 +33,7 @@ namespace UserMaintenance2
             this.button_add = new System.Windows.Forms.Button();
             this.label_FullName = new System.Windows.Forms.Label();
             this.textBox_FullName = new System.Windows.Forms.TextBox();
+            this.button_fajlbairas = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // listBox_users
@@ -70,11 +71,22 @@ namespace UserMaintenance2
             this.textBox_FullName.Size = new System.Drawing.Size(200, 26);
             this.textBox_FullName.TabIndex = 7;
             // 
+            // button_fajlbairas
+            // 
+            this.button_fajlbairas.Location = new System.Drawing.Point(305, 160);
+            this.button_fajlbairas.Name = "button_fajlbairas";
+            this.button_fajlbairas.Size = new System.Drawing.Size(347, 33);
+            this.button_fajlbairas.TabIndex = 8;
+            this.button_fajlbairas.Text = "button1";
+            this.button_fajlbairas.UseVisualStyleBackColor = true;
+            this.button_fajlbairas.Click += new System.EventHandler(this.button_fajlbairas_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button_fajlbairas);
             this.Controls.Add(this.textBox_FullName);
             this.Controls.Add(this.label_FullName);
             this.Controls.Add(this.button_add);
@@ -92,6 +104,7 @@ namespace UserMaintenance2
         private System.Windows.Forms.Button button_add;
         private System.Windows.Forms.Label label_FullName;
         private System.Windows.Forms.TextBox textBox_FullName;
+        private System.Windows.Forms.Button button_fajlbairas;
     }
 }
 
